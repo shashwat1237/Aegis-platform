@@ -1,5 +1,5 @@
 from graphviz import Digraph
-
+# We used this script to generate the static schema diagrams for our "Four Semantic Layers" visualization.
 mega_graph = {
 
 "nodes": [
@@ -31,7 +31,7 @@ mega_graph = {
 { "id": "c3", "type": "output", "position": { "x": 950, "y": 300 }, "data": { "label": "Churn Predictor", "fields": ["user_id", "tier", "p_churn"] }, "style": { "background": "#1a1a1a", "color": "#fff", "border": "1px solid #333", "width": 180 } }
 
 ],
-
+# We manually linked these edges by Join Key so the BFS algorithm can trace the Blast Radius downstream.
 "edges": [
 
 { "id": "e1", "source": "s1", "target": "st1", "label": "id", "animated": True },
@@ -58,24 +58,24 @@ mega_graph = {
 
 def create_schema_diagram(graph_data, filename="schema_diagram"):
     dot = Digraph(comment='Data Pipeline Schema', format='png')
-    dot.attr(rankdir='LR', splines='ortho') 
+    dot.attr(rankdir='LR', splines='ortho')
 
     for node in graph_data['nodes']:
         node_id = node['id']
         label_title = node['data']['label']
         fields = node['data']['fields']
-        
+
 
         bg_color = node['style']['background']
         font_color = node['style']['color']
 
         field_rows = "".join([f'<tr><td align="left" port="{f}">{f}</td></tr>' for f in fields])
-        
+
         html_label = f'''<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
             <tr><td bgcolor="{bg_color}"><font color="{font_color}"><b>{label_title}</b></font></td></tr>
             {field_rows}
         </table>>'''
-        
+
         dot.node(node_id, label=html_label, shape='none')
 
     for edge in graph_data['edges']:
