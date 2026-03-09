@@ -7,6 +7,14 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Focus](https://img.shields.io/badge/Focus-AI_Data_Observability-purple)
 
+
+## Links
+
+![Youtube link](https://youtu.be/fAV8Jt_0nO8)
+![MVP link](https://aegis-frontend-1079363418946.us-central1.run.app/)
+
+
+
 ---
 
 ## 📌 Overview
