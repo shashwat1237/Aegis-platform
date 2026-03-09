@@ -10,8 +10,8 @@
 ---
 ## Links
 
-![Youtube link](https://youtu.be/fAV8Jt_0nO8)
-![MVP link](https://aegis-frontend-1079363418946.us-central1.run.app/)
+[Youtube link](https://youtu.be/fAV8Jt_0nO8)
+[MVP link](https://aegis-frontend-1079363418946.us-central1.run.app/)
 
 ---
 
